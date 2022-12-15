@@ -1,0 +1,2 @@
+2022-10-14 02:54:16.4026 INFO Company with id: c9d4c053-49b6-410c-bc78-2d54a9991970 doesn't exist in the database.
+2022-10-14 02:59:23.7941 INFO Employee with id: 86dba8c0-d178-41e7-938c-ed49778fb53a doesn't exist in the database.

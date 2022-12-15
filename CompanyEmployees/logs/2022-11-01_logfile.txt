@@ -1,0 +1,131 @@
+2022-11-01 16:39:14.1726 DEBUG TestMiddleware
+2022-11-01 16:39:14.3087 DEBUG https://localhost:44310/test/companies
+2022-11-01 16:39:14.3087 DEBUG 404
+2022-11-01 16:39:35.5036 DEBUG TestMiddleware
+2022-11-01 16:39:35.5036 DEBUG https://localhost:44310/companies
+2022-11-01 16:39:45.9706 DEBUG 200
+2022-11-01 16:40:40.4519 DEBUG TestMiddleware
+2022-11-01 16:40:40.5606 DEBUG https://localhost:44310/test/companies
+2022-11-01 16:40:47.1393 DEBUG 200
+2022-11-01 17:17:47.1394 DEBUG TestMiddleware
+2022-11-01 17:17:47.3325 DEBUG https://localhost:44310/companies
+2022-11-01 17:18:12.7935 DEBUG 200
+2022-11-01 17:18:32.9775 DEBUG TestMiddleware
+2022-11-01 17:18:32.9775 DEBUG https://localhost:44310/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees
+2022-11-01 17:18:32.9775 DEBUG 404
+2022-11-01 17:18:42.4183 DEBUG TestMiddleware
+2022-11-01 17:18:42.4183 DEBUG https://localhost:44310/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employee
+2022-11-01 17:18:42.4183 DEBUG 404
+2022-11-01 17:19:00.6054 DEBUG TestMiddleware
+2022-11-01 17:19:00.6054 DEBUG https://localhost:44310/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees
+2022-11-01 17:19:00.6054 DEBUG 404
+2022-11-01 17:19:07.2463 DEBUG TestMiddleware
+2022-11-01 17:19:07.2463 DEBUG https://localhost:44310/test/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees
+2022-11-01 17:19:07.2463 DEBUG 404
+2022-11-01 17:19:12.6382 DEBUG TestMiddleware
+2022-11-01 17:19:12.6382 DEBUG https://localhost:44310/test/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees
+2022-11-01 17:19:12.6409 DEBUG 404
+2022-11-01 17:19:27.7355 DEBUG TestMiddleware
+2022-11-01 17:19:27.7355 DEBUG https://localhost:44310/api/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees
+2022-11-01 17:20:43.7735 ERROR Something went wrong: AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AsyncStateMachineBox`1 -> IEnumerable`1
+System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.IEnumerable`1[[Entities.Models.Employee, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Repository.EmployeeRepository+<GetEmployeesAsync>d__1, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Entities.DataTransferObjects.EmployeeDto, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method67(Closure , Object , IEnumerable`1 , ResolutionContext )
+   at CompanyEmployees.Controllers.EmployeesController.GetEmployeesForCompany(Guid companyId) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Controllers\EmployeesController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CompanyEmployees.Middlewares.TestMiddleware.Invoke(HttpContext httpContext, ILoggerManager _logger) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Middlewares\TestMiddleware.cs:line 25
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-11-01 17:22:12.6388 DEBUG TestMiddleware
+2022-11-01 17:22:12.7677 DEBUG https://localhost:44310/api/companies/3d490a70-94ce-4d15-9494-5248280c2ce3/employees/80ABBCA8-664D-4B20-B5DE-024705497D4A
+2022-11-01 17:22:43.8206 ERROR Something went wrong: AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AsyncStateMachineBox`1 -> EmployeeDto
+System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[Entities.Models.Employee, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Repository.EmployeeRepository+<GetEmployeeAsync>d__2, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Entities.DataTransferObjects.EmployeeDto
+   at lambda_method50(Closure , Object , EmployeeDto , ResolutionContext )
+   at CompanyEmployees.Controllers.EmployeesController.GetEmployeeForCompany(Guid companyId, Guid id) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Controllers\EmployeesController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CompanyEmployees.Middlewares.TestMiddleware.Invoke(HttpContext httpContext, ILoggerManager _logger) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Middlewares\TestMiddleware.cs:line 25
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-11-01 17:27:30.3968 ERROR Something went wrong: AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AsyncStateMachineBox`1 -> EmployeeDto
+System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[Entities.Models.Employee, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Repository.EmployeeRepository+<GetEmployeeAsync>d__2, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Entities.DataTransferObjects.EmployeeDto
+   at lambda_method49(Closure , Object , EmployeeDto , ResolutionContext )
+   at CompanyEmployees.Controllers.EmployeesController.GetEmployeeForCompany(Guid companyId, Guid id) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Controllers\EmployeesController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-11-01 17:34:33.1879 INFO Employee with id: 80abbca8-664d-4b20-b5de-024705497d4a doesn't exist in the database.
+2022-11-01 17:36:35.9401 INFO Employee with id: 80abbca8-664d-4b20-b5de-024705497d4a doesn't exist in the database.
+2022-11-01 18:40:50.5723 ERROR Invalid model state for the object. Controller: Companies, action: CreateCompany
+2022-11-01 18:43:14.6427 ERROR Invalid model state for the object. Controller: Employees, action: CreateEmployeeForCompany
+2022-11-01 18:43:38.5429 ERROR Object sent from client is null. Controller: Employees, action: CreateEmployeeForCompany
+2022-11-01 18:43:49.8038 ERROR Invalid model state for the object. Controller: Employees, action: CreateEmployeeForCompany
+2022-11-01 18:45:23.3918 ERROR Something went wrong: Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_Employees_Companies_CompanyId". Конфликт произошел в базе данных "CompanyEmployee", таблица "dbo.Companies", column 'CompanyId'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5f76648d-55fc-4c1a-9e80-cfa161d15dcb
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CompanyEmployees.Controllers.EmployeesController.CreateEmployeeForCompany(Guid companyId, EmployeeForCreationDto employee) in C:\Users\maksl\source\repos\CompanyEmployees\CompanyEmployees\Controllers\EmployeesController.cs:line 70
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
